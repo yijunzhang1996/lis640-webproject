@@ -20,9 +20,40 @@
         </nav>
     </header>
 
+    <main>
+        <section id="contact-info">
+            <h2>Contact Us</h2>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@chineserestaurant.com</p>
+            <p>Address: 1234 Restaurant St, Food City, FC 56789</p>
+        </section>
+
+        <section id="location-map">
+            <h2>Find Us Here</h2>
+            <!-- Embed Google Maps or similar service -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3124...." width="600" height="450"
+                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <section id="contact-form">
+            <h2>Message Us</h2>
+            <form action="submit_contact.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea><br>
+                <input type="submit" value="Send">
+            </form>
+        </section>
+    </main>
+
     <footer>
         <!-- Footer content -->
+        <p>Copyright © 2023 Chinese Restaurant</p>
     </footer>
+
 
 </body>
 
