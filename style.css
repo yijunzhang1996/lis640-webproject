@@ -2,9 +2,17 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* 导航栏样式 */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
+  text-align: center;
 }
 
 nav ul li {
@@ -14,20 +22,49 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
-header, footer {
+/* 部分样式 */
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+/* 标题样式 */
+h1 {
+  color: #d9534f;
+}
+
+/* 按钮样式 */
+.menu-button {
+  text-decoration: none; /* 移除链接下划线 */
+}
+
+.menu-button button {
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px; /* 可以调整为您喜欢的大小 */
+  border-radius: 5px; /* 可以调整为您喜欢的圆角大小 */
+}
+
+.menu-button button:hover {
+  background: #c9302c; /* 鼠标悬停时的深色背景 */
+}
+
+/* 图像样式 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 底部样式 */
+footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 10px 0;
-}
-
-section {
-  padding: 20px;
-}
-
-#menu {
-  /* Styles for menu items */
 }
