@@ -38,7 +38,8 @@ h1 {
 
 /* 按钮样式 */
 .menu-button {
-  text-decoration: none; /* 移除链接下划线 */
+  text-decoration: none;
+  /* 移除链接下划线 */
 }
 
 .menu-button button {
@@ -47,12 +48,15 @@ h1 {
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 16px; /* 可以调整为您喜欢的大小 */
-  border-radius: 5px; /* 可以调整为您喜欢的圆角大小 */
+  font-size: 16px;
+  /* 可以调整为您喜欢的大小 */
+  border-radius: 5px;
+  /* 可以调整为您喜欢的圆角大小 */
 }
 
 .menu-button button:hover {
-  background: #c9302c; /* 鼠标悬停时的深色背景 */
+  background: #c9302c;
+  /* 鼠标悬停时的深色背景 */
 }
 
 /* 图像样式 */
@@ -67,4 +71,72 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
+}
+
+/* 基本的表单容器样式 */
+#contact-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 标签样式 */
+#contact-form label {
+  display: block;
+  /* 让标签独占一行 */
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* 输入框和文本区域的基本样式 */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width: 100%;
+  /* 宽度100%以填满容器 */
+  padding: 8px;
+  /* 内部间距 */
+  margin-bottom: 15px;
+  /* 下方间距 */
+  border: 1px solid #ccc;
+  /* 边框 */
+  border-radius: 4px;
+  /* 圆角边框 */
+}
+
+/* 文本区域额外的样式 */
+#contact-form textarea {
+  height: 120px;
+  /* 设置一个固定的高度 */
+  resize: none;
+  /* 禁止调整大小 */
+}
+
+/* 提交按钮的样式 */
+#contact-form input[type="submit"] {
+  background-color: #0056b3;
+  /* 按钮颜色 */
+  color: white;
+  /* 文字颜色 */
+  padding: 10px 15px;
+  /* 内部间距 */
+  font-size: 18px;
+  /* 字体大小 */
+  border: none;
+  /* 无边框 */
+  border-radius: 4px;
+  /* 圆角边框 */
+  cursor: pointer;
+  /* 鼠标悬停时变成手形 */
+  transition: background-color 0.3s;
+  /* 过渡动画 */
+}
+
+/* 按钮在鼠标悬停时的样式 */
+#contact-form input[type="submit"]:hover {
+  background-color: #003580;
 }
