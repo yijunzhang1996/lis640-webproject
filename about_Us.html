@@ -8,10 +8,13 @@
   <script>
     // Function to set rating
     function setRating(rating) {
+      // Get the element with the id 'rating-display'
       const ratingDisplay = document.getElementById('rating-display');
-      ratingDisplay.textContent = `You rated us: ${rating} / 5`; // Display the user's rating
+      // Update the text content of the 'rating-display' element to show the rating given by the user
+      ratingDisplay.textContent = `You rated us: ${rating} / 5`;
       // This could be expanded to store ratings in a database or locally
     }
+
   </script>
 </head>
 <body>
