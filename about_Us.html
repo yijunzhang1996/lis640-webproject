@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Chinese Restaurant</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Function to set rating
+    function setRating(rating) {
+      const ratingDisplay = document.getElementById('rating-display');
+      ratingDisplay.textContent = `You rated us: ${rating} / 5`; // Display the user's rating
+      // This could be expanded to store ratings in a database or locally
+    }
+  </script>
 </head>
-
 <body>
   <header>
     <nav>
@@ -19,31 +25,50 @@
       </ul>
     </nav>
   </header>
-
   <main>
-    <section id="about">
-      <h1>Welcome to Our Restaurant</h1>
-      <img src="images/chef_and_team.jpg" alt="Our Chef and Team" style="width:100%;height:auto;">
-      <p>Founded in 1998, our restaurant has been serving the community with authentic Chinese cuisine for over two
-        decades. Our mission is to bring the rich flavors and traditions of Chinese cooking to your dining table,
-        ensuring each dish is crafted with care and authenticity.</p>
-
-      <h2>Our Philosophy</h2>
-      <p>We believe in using only the freshest ingredients, sourced locally whenever possible, to create dishes that are
-        both delicious and wholesome. Our menu features a wide range of options from various regions of China, each
-        prepared with traditional techniques passed down through generations.</p>
-
-      <h2>Meet Our Chef</h2>
-      <p>Chef Liang is a master of Chinese culinary arts with over 30 years of experience in top kitchens across Beijing
-        and Shanghai. Under his guidance, our kitchen team works tirelessly to replicate the unique tastes of
-        traditional Chinese dishes while also exploring innovative approaches to classic recipes.</p>
+    <main>
+      <section id="about" style="display: flex; align-items: center;">
+        <div class="text-content" style="flex: 1; padding-right: 20px;">
+          <h1>Welcome to Our Restaurant</h1>
+            <p>Founded in 1998, our restaurant has been serving the community with authentic Chinese cuisine for over two decades. 
+            From humble beginnings as a small family-run spot, we've grown into a beloved community landmark. 
+            Our mission is to bring the rich flavors and traditions of Chinese cooking to your dining table, 
+            ensuring each dish is crafted with care and authenticity.</p>
+              
+          <h1>Our Philosophy</h1>
+            <p>We believe in using only the freshest ingredients, sourced locally whenever possible, 
+            to create dishes that are both delicious and wholesome. 
+            Each plate tells a story of seasons and local farms, creating a menu that's not only tasty but also 
+            supports sustainable and responsible food production. Our commitment to traditional techniques passed down 
+            through generations ensures every bite carries a piece of history and culture.</p>
+              
+          <h1>Meet Our Chef</h1>
+            <p>Chef Liang, a master of Chinese culinary arts, has over 30 years of experience in top kitchens across Beijing and Shanghai. 
+              His journey from a novice apprentice to a celebrated chef is a testament to his passion and dedication to Chinese cuisine. 
+              Under his guidance, our kitchen team works tirelessly to replicate the unique tastes of traditional Chinese dishes 
+              while also exploring innovative approaches to classic recipes. His leadership not only perfects the menu 
+              but also nurtures the next generation of chefs through rigorous training and mentorship.</p>            
+        </div>
+        <div class="image-content" style="flex: 1;">
+          <img src="chef_and_team.jpeg" alt="Our Chef and Team" style="width:100%; height:auto;">
+        </div>
+      </section>
+          
+      <div class="rating-section">
+        <h2>Rate Our Restaurant</h2>
+        <p>Please rate your experience at our restaurant:</p>
+        <button onclick="setRating(1)">1</button>
+        <button onclick="setRating(2)">2</button>
+        <button onclick="setRating(3)">3</button>
+        <button onclick="setRating(4)">4</button>
+        <button onclick="setRating(5)">5</button>
+        <p id="rating-display">Your rating will appear here.</p>
+      </div>
+      
     </section>
   </main>
-
   <footer>
     <p>Copyright © LIS 640 Group_2</p>
   </footer>
-
 </body>
-
 </html>
