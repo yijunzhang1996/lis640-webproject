@@ -162,7 +162,7 @@ button:hover {
 
 .text-content {
   flex: 1;
-  padding-right: 20px; /* Ensures there's a gap between text and image */
+  padding-right: 20px; 
 }
 
 .image-content {
@@ -180,21 +180,96 @@ button:hover {
 }
 
 .rating-section {
-  text-align: center; /* Center the text and buttons inside the div */
-  margin: 20px 0; /* Add some top and bottom margin for spacing */
-  padding: 20px; /* Optional padding for better spacing */
+  text-align: center; 
+  margin: 20px 0; 
+  padding: 20px; 
 }
 
 .rating-section button {
-  margin: 0 5px; /* Space out the buttons a bit */
+  margin: 0 5px; 
 }
 
 
 #menu li {
-  border: 1px solid #ccc; /* 给每个菜品添加边框 */
+  border: 1px solid #ccc; 
   margin: 5px;
   text-align: center;
-  position: relative; /* 为了定位图片 */
-  transition: min-height 0.3s ease; /* 平滑高度变化 */
+  position: relative; 
+  transition: min-height 0.3s ease; 
 }
 
+.menu-category h3 {
+  display: inline-block; 
+  font-family: 'Arial', sans-serif; 
+  font-size: 24px; 
+  color: #ffffff; 
+  background-color: #1e69de; 
+  padding: 10px 20px; 
+  border-radius: 10px; 
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); 
+  text-align: center; 
+  margin: 20px auto; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.menu-category h3:hover {
+  background-color: #6db3f2; 
+  color: #000000; 
+}
+
+.menu-category h3 {
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+.menu-category h3 {
+  background-image: linear-gradient(to right, #6db3f2, #1e69de); 
+  color: #fff; 
+}
+
+@keyframes rainbowText {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes shadowAnimation {
+  0%, 100% {
+    text-shadow: 2px 2px 2px #FF6347, -2px -2px 2px #7FFFD4;
+  }
+  25% {
+    text-shadow: 2px 2px 2px #7FFFD4, -2px -2px 2px #FF6347;
+  }
+  50% {
+    text-shadow: 2px 2px 2px #DA70D6, -2px -2px 2px #6495ED;
+  }
+  75% {
+    text-shadow: 2px 2px 2px #6495ED, -2px -2px 2px #DA70D6;
+  }
+}
+
+#menu-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #FF6347, #7FFFD4, #DA70D6, #6495ED);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 10s linear infinite, shadowAnimation 10s linear infinite;
+  text-align: center;
+  padding: 20px;
+}
+@keyframes haloEffect {
+  from {
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+  }
+  to {
+    box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0);
+  }
+}
+
+#menu-title:hover {
+  animation: haloEffect 2s infinite alternate;
+}
