@@ -25,18 +25,18 @@
     <div class="menu-category">
       <h3>Appetizers</h3>
       <ul>
-        <li>
+        <li data-img="menu_pic\BBQ Pork Bun.jpg">
           <strong>BBQ Pork Buns</strong> - Soft, fluffy buns filled with savory barbecued pork.
         </li>
-        <li>
+        <li data-img="menu_pic\Spring Rolls.jpg">
           <strong>Spring Rolls (2 pcs)</strong> - Crispy rolls filled with julienne vegetables and glass noodles, served
           with a sweet chili dipping sauce.
         </li>
-        <li>
+        <li data-img="menu_pic\Chili Oil Wontons.jpg">
           <strong>Chili Oil Wontons (6 pcs)</strong> - Wontons filled with seasoned pork, drizzled with a spicy chili
           oil and garnished with green onions.
         </li>
-        <li>
+        <li data-img="menu_pic\Dumplings.jpg">
           <strong>Dumplings (6 pcs)</strong> - Steamed or fried dumplings stuffed with your choice of pork or
           vegetables, accompanied by a soy and vinegar dip.
         </li>
@@ -45,24 +45,24 @@
     <div class="menu-category">
       <h3>Main Courses</h3>
       <ul>
-        <li>
+        <li data-img="menu_pic\Ma Po Tofu.jpg">
           <strong>Ma Po Tofu</strong> - Soft tofu in a spicy, pungent bean sauce with minced pork.
         </li>
-        <li>
+        <li data-img="menu_pic\Beef and Broccoli.jpg"v>
           <strong>Beef and Broccoli</strong> - Stir-fried beef slices with fresh broccoli in a rich garlic sauce.
         </li>
-        <li>
+        <li data-img="menu_pic\Shrimp Fried Rice.jpg">
           <strong>Shrimp Fried Rice</strong> - Fried rice with shrimp, eggs, peas, carrots, and green onions.
-        </li>
+        </li data-img="menu_pic\Peking Duck.jpg">
         <li>
           <strong>Peking Duck</strong> - Roasted duck with crispy skin, served with pancakes, scallions, and hoisin
           sauce.
         </li>
-        <li>
+        <li data-img="menu_pic\Szechuan Spicy Chicken.jpg">
           <strong>Szechuan Spicy Chicken</strong> - Deep-fried chicken tossed with a spicy Szechuan sauce, served with
           pickled vegetables.
         </li>
-        <li>
+        <li data-img="menu_pic\Kung Pao Chicken.jpg">
           <strong>Kung Pao Chicken</strong> - A Sichuan-inspired dish featuring tender chicken stir-fried with peanuts,
           vegetables, and chili peppers in a savory and slightly sweet sauce.
         </li>
@@ -71,14 +71,14 @@
     <div class="menu-category">
       <h3>Desserts</h3>
       <ul>
-        <li>
+        <li data-img="menu_pic\Lychee Sorbet.jpg">
           <strong>Lychee Sorbet</strong> - A refreshing sorbet made from sweet lychee fruits.
         </li>
-        <li>
+        <li data-img="menu_pic\Mango Pudding.jpg">
           <strong>Mango Pudding</strong> - A silky, mango-flavored dessert topped with fresh mango pieces and a light
           syrup.
         </li>
-        <li>
+        <li data-img="menu_pic\Sesame Balls.jpg">
           <strong>Sesame Balls</strong> - Sweet dough balls coated with sesame seeds and filled with red bean paste,
           served hot.
         </li>
@@ -87,16 +87,16 @@
     <div class="menu-category">
       <h3>Beverages</h3>
       <ul>
-        <li>
+        <li data-img="menu_pic\Lychee Juice.jpg">
           <strong>Lychee Juice</strong> - Sweet and refreshing juice made from fresh lychees.
         </li>
-        <li>
+        <li data-img="menu_pic\Beer Tsingtao.jpg">
           <strong>Beer Tsingtao</strong> - Popular Chinese beer, perfect complement to spicy dishes.
         </li>
-        <li>
+        <li data-img="menu_pic\Bubble Tea.jpg">
           <strong>Bubble Tea</strong> - Taiwanese tea-based drink that contains tea, flavored milk, and tapioca pearls.
         </li>
-        <li>
+        <li data-img="menu_pic\Chinese Tea.jpg">
           <strong>Chinese Tea</strong> - A selection of traditional Chinese teas including Jasmine, Oolong, and Green
           tea.
         </li>
@@ -109,7 +109,43 @@
   <footer>
     <p>Copyright © LIS 640 Group_2</p>
   </footer>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuItems = document.querySelectorAll('#menu li');
+  
+      menuItems.forEach(item => {
+        item.addEventListener('mouseenter', function () {
+          if (this.getElementsByTagName('img').length === 0) {
+            const imgSrc = this.getAttribute('data-img');
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            img.style.maxWidth = '150px'; 
+            img.style.display = 'block'; 
+            img.style.margin = '10px auto'; 
+  
+            const caption = document.createElement('span');
+            caption.textContent = "(Click to hide the picture)";
+            caption.style.display = 'block'; 
+            caption.style.textAlign = 'center'; 
+            caption.style.marginTop = '5px'; 
+            caption.style.color = 'gray'; 
+            caption.style.fontStyle = 'italic'; 
+  
+            this.appendChild(img);
+            this.appendChild(caption);
+  
+            img.addEventListener('click', function() {
+              this.parentNode.removeChild(this.nextSibling); 
+              this.parentNode.removeChild(this); 
+            });
+          }
+        });
+      });
+    });
+  </script>
+  
+  
+  
 </body>
 
 </html>

@@ -189,3 +189,12 @@ button:hover {
   margin: 0 5px; /* Space out the buttons a bit */
 }
 
+
+#menu li {
+  border: 1px solid #ccc; /* 给每个菜品添加边框 */
+  margin: 5px;
+  text-align: center;
+  position: relative; /* 为了定位图片 */
+  transition: min-height 0.3s ease; /* 平滑高度变化 */
+}
+
