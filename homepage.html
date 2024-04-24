@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chinese Restaurant</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="homepage.css">
 </head>
 
-<body>
-  <header>
-    <nav>
+<body class="homepage">
+  <header class="homepage-header">
+    <nav class="homepage-nav">
       <ul>
+        <li class="nav-logo"><a href="homepage.html"><img src="images/logo.png" alt="Restaurant Logo"></a></li>
         <li><a href="homepage.html">Home</a></li>
         <li><a href="about_Us.html">About Us</a></li>
         <li><a href="menu.html">Menu</a></li>
@@ -20,32 +22,38 @@
     </nav>
   </header>
 
-  <section id="home">
+  <section id="home" class="homepage-section">
+    <div class="carousel">
+        <div class="carousel-images">
+            <img class="carousel-image" src="images/homepage-slide1.jpg" alt="Slide 1">
+            <img class="carousel-image" src="images/homepage-slide2.jpg" alt="Slide 2">
+            <img class="carousel-image" src="images/homepage-slide3.jpg" alt="Slide 3">
+            <img class="carousel-image" src="images/homepage-slide4.jpg" alt="Slide 4">
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+            <span class="indicator" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+     <!-- Controls -->
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+    <div class="overlay"></div>
     <!-- Content for home -->
-    <h1>Authentic Chinese Delicacies</h1>
-    <p>Brief slogan</p>
-    <a href="menu.html" class="menu-button">
+    <h1 class="homepage-title">Authentic Chinese Delicacies</h1>
+    <p class="homepage-slogan">Brief slogan111</p>
+    <a href="menu.html" class="menu-button homepage-button">
       <button>See Menu & Order</button>
     </a>
-  </section>
-
-  <section id="about">
-    <!-- Content for about us -->
-    <h2>Our Story</h2>
-    <p>introduction tbc</p>
-  </section>
-
-  <section id="contact">
-    <!-- Content for contact & location -->
-    <h2>Contact & Location</h2>
-    <p>Find us at...</p>
-    <!-- Insert map and contact details -->
   </section>
 
   <footer>
     <p>Copyright © LIS 640 Group_2</p>
   </footer>
 
+<script src="homepage.js"></script>    
 </body>
 
 </html>
