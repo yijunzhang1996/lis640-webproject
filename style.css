@@ -162,7 +162,7 @@ button:hover {
 
 .text-content {
   flex: 1;
-  padding-right: 20px; 
+  padding-right: 20px;
 }
 
 .image-content {
@@ -173,77 +173,88 @@ button:hover {
   #aboutus {
     flex-direction: column;
   }
-  .text-content, .image-content {
+
+  .text-content,
+  .image-content {
     padding-right: 0;
     width: 100%;
   }
 }
 
 .rating-section {
-  text-align: center; 
-  margin: 20px 0; 
-  padding: 20px; 
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
 }
 
 .rating-section button {
-  margin: 0 5px; 
+  margin: 0 5px;
 }
 
 
 #menu li {
-  border: 1px solid #ccc; 
+  border: 1px solid #ccc;
   margin: 5px;
   text-align: center;
-  position: relative; 
-  transition: min-height 0.3s ease; 
+  position: relative;
+  transition: min-height 0.3s ease;
 }
 
 .menu-category h3 {
-  display: inline-block; 
-  font-family: 'Arial', sans-serif; 
-  font-size: 24px; 
-  color: #ffffff; 
-  background-color: #1e69de; 
-  padding: 10px 20px; 
-  border-radius: 10px; 
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); 
-  text-align: center; 
-  margin: 20px auto; 
-  transition: background-color 0.3s ease, color 0.3s ease; 
+  display: inline-block;
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #1e69de;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 20px auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .menu-category h3:hover {
-  background-color: #6db3f2; 
-  color: #000000; 
+  background-color: #6db3f2;
+  color: #000000;
 }
 
 .menu-category h3 {
-  transition: background-color 0.3s ease, color 0.3s ease; 
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .menu-category h3 {
-  background-image: linear-gradient(to right, #6db3f2, #1e69de); 
-  color: #fff; 
+  background-image: linear-gradient(to right, #6db3f2, #1e69de);
+  color: #fff;
 }
 
 @keyframes rainbowText {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0 0;
   }
+
   50% {
     background-position: 100% 0;
   }
 }
 
 @keyframes shadowAnimation {
-  0%, 100% {
+
+  0%,
+  100% {
     text-shadow: 2px 2px 2px #FF6347, -2px -2px 2px #7FFFD4;
   }
+
   25% {
     text-shadow: 2px 2px 2px #7FFFD4, -2px -2px 2px #FF6347;
   }
+
   50% {
     text-shadow: 2px 2px 2px #DA70D6, -2px -2px 2px #6495ED;
   }
+
   75% {
     text-shadow: 2px 2px 2px #6495ED, -2px -2px 2px #DA70D6;
   }
@@ -261,10 +272,12 @@ button:hover {
   text-align: center;
   padding: 20px;
 }
+
 @keyframes haloEffect {
   from {
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
   }
+
   to {
     box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0);
   }
@@ -272,4 +285,63 @@ button:hover {
 
 #menu-title:hover {
   animation: haloEffect 2s infinite alternate;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.centered_button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon {
+  max-width: 50px;
+  height: auto;
+  display: block;
+  margin-right: 10px;
+}
+
+.social-icon:last-child {
+  margin-right: 0;
 }
