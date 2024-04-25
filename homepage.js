@@ -33,4 +33,30 @@ document.querySelector('.prev').addEventListener('click', function() {
 
 document.querySelector('.next').addEventListener('click', function() {
   plusSlides(1);
+
+  document.getElementById('seeMenuOrderButton').onclick = function() {
+    var currentTime = new Date();
+    var currentDay = currentTime.getDay();
+    var currentHour = currentTime.getHours();
+    var currentMinute = currentTime.getMinutes();
+
+    // Convert current time to minutes since midnight
+    var currentTimeInMinutes = currentHour * 60 + currentMinute;
+
+    var isOpen = false;
+
+    if (currentDay !== 1) { // If it's not Monday
+      if ((currentTimeInMinutes >= 690 && currentTimeInMinutes <= 840) || 
+          (currentTimeInMinutes >= 1050 && currentTimeInMinutes <= 1220)) { // 
+        isOpen = true;
+      }
+    }
+
+    if (!isOpen) {
+      alert("We're sorry, the restaurant is currently closed. Please see our business hours.");
+    } else {
+
+      window.location.href = '/menu.html';
+    }
+  };
 });
