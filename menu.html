@@ -152,5 +152,30 @@
       });
     });
   </script>
+ <script>
+    // 添加或更新导航链接的激活状态
+    function normalizePath(path) {
+        return path.endsWith('/') ? path.slice(0, -1) : path;
+    }
+
+    function updateActiveNavLink() {
+        const links = document.querySelectorAll('.homepage-nav ul li a');
+        const currentPath = window.location.pathname; // 获取当前页面的路径
+
+        links.forEach(link => {
+            console.log("Checking link:", link.pathname); // 输出每个链接的路径，检查比较过程
+            if (normalizePath(link.pathname) === normalizePath(currentPath)) {
+                console.log("Match found, adding active class to:", link.pathname);
+                link.classList.add('active'); // 如果匹配，添加 'active' 类
+            } else {
+                link.classList.remove('active'); // 如果不匹配，移除 'active' 类
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      updateActiveNavLink();
+    });
+  </script>
 </body>
 </html>
