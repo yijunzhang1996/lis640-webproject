@@ -60,10 +60,11 @@
         <section id="location-map">
             <h2>Find Us Here</h2>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.362796609908!2d-89.40362052433184!3d43.07586748958012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8807acca7b3dcfb1%3A0x65b6220ab59db4f8!2sScience+Hall%2C+550+N+Park+St%2C+Madison%2C+WI+53706!5e0!3m2!1szh-CN!2sus!4v1713050886147!5m2!1szh-CN!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.362796609908!2d-89.40362052433184!3d43.07586748958012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8807acca7b3dcfb1%3A0x65b6220ab59db4f8!2sScience+Hall%2C+550+N+Park+St%2C+Madison%2C+WI+53706!5e0!3m2!1sen!2sus"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
+
         </section>
 
 
@@ -106,22 +107,22 @@
         }
     </script>
 <script>
-    // 添加或更新导航链接的激活状态
+    
     function normalizePath(path) {
         return path.endsWith('/') ? path.slice(0, -1) : path;
     }
 
     function updateActiveNavLink() {
         const links = document.querySelectorAll('.homepage-nav ul li a');
-        const currentPath = window.location.pathname; // 获取当前页面的路径
+        const currentPath = window.location.pathname;
 
         links.forEach(link => {
-            console.log("Checking link:", link.pathname); // 输出每个链接的路径，检查比较过程
+            console.log("Checking link:", link.pathname);
             if (normalizePath(link.pathname) === normalizePath(currentPath)) {
                 console.log("Match found, adding active class to:", link.pathname);
-                link.classList.add('active'); // 如果匹配，添加 'active' 类
+                link.classList.add('active');
             } else {
-                link.classList.remove('active'); // 如果不匹配，移除 'active' 类
+                link.classList.remove('active');
             }
         });
     }
